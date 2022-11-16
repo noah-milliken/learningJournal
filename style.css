@@ -26,6 +26,18 @@ h1 {
     color: dimgray;
 }
 
+.hero h1 {
+    font-size: 1.5rem;
+    color: azure;
+}
+
+.hero-text p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: azure;
+}
+
 /* ========== HEADER ========== */
 
 .navbar {
@@ -35,6 +47,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .title {
@@ -68,6 +81,32 @@ h1 {
     text-decoration: none;
 }
 
+/* ========== HERO ========== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    background-image: url("blog-image-hero.png");
+    background-size: cover;
+    height: 50vw;
+
+}
+
+.hero-text {
+    margin-bottom: 1em;
+}
+
+
+
+.hero h1,
+p,
+.date {
+    margin: 0.3em 1rem;
+}
+
+
+/* ========== MEDIA QUERIES ========== */
 @media (min-width: 675px) {
     h1 {
         font-size: 1rem;
@@ -77,8 +116,8 @@ h1 {
         font-size: 1rem;
     }
 
-    .nav-links a:after {
-        color: ;
+    .hero-text {
+        width: 60%;
+        margin-bottom: 2em;
     }
-
 }
