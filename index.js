@@ -41,6 +41,20 @@ const blogPostData = [
         imagePath: "blog-image-01.png",
         imageAlt: 'Picture of a computer and desk',
     },
+    {
+        date: "June 31, 2022",
+        title: 'Blog Three',
+        content: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
+        imagePath: "blog-image-03.png",
+        imageAlt: 'Picture of a computer and desk',
+    },
+    {
+        date: "July 21, 2022",
+        title: 'Blog Six',
+        content: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
+        imagePath: "blog-image-06.png",
+        imageAlt: 'Picture of a computer and desk',
+    },
 ]
 
 
@@ -49,21 +63,19 @@ function getBlogHtml() {
     let blogHtml = ``
     blogPostData.forEach(function (post) {
         blogHtml += `
-        <div class="post">
-            <img src="${post.imagePath}" alt="${post.imageAlt}">
-            <div class="blog-text">
-                <p>${post.date}</p>
-                <h3>${post.title}</h3>
-                <p>${post.content}</p>
-            </div>
-        </div>
+        <article class="post">
+            <img class="article-img" src="${post.imagePath}" alt="${post.imageAlt}">
+            <span class="article-info">${post.date}</span>
+            <h2 class="article-title">${post.title}</h2>
+            <p class="article-preview">${post.content}</p>
+        </article>
         `
     })
     return blogHtml
 
 }
 function render() {
-    const blogFeed = document.getElementById('blog-feed')
+    const blogFeed = document.getElementById('posts')
     blogFeed.innerHTML = getBlogHtml()
 }
 render()

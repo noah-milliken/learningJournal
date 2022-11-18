@@ -5,38 +5,13 @@ html {
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    color: #151515;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 /* ========== TYPOGRAPHY ========== */
-h1 {
-    font-size: 0.875rem;
-}
-
-.nav-links a {
-    font-size: 0.875rem;
-    text-decoration: none;
-    color: black;
-}
-
-.nav-links a:hover {
-    color: dimgray;
-}
-
-.hero h1 {
-    font-size: 1.5rem;
-    color: azure;
-}
-
-.hero-text p {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1rem;
-    font-weight: 100;
-    color: azure;
-}
 
 /* ========== HEADER ========== */
 
@@ -82,43 +57,41 @@ h1 {
 }
 
 /* ========== HERO ========== */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 100%;
-    background-image: url("blog-image-hero.png");
-    background-size: cover;
-    height: 50vw;
 
-}
-
-.hero-text {
-    max-width: 400px;
-    margin: 1em;
-
-}
-
-/* .hero h1,
-p,
-.date {
-    margin: 0.3em 1rem;
-} */
 
 /* ========== BLOG FEED ========== */
-.blog-feed {
-    max-width: 500px;
-    justify-content: start;
-    display: flex;
-    flex-direction: column;
-    margin: 1em;
-    text-align: left;
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding-top: 1.5em;
+    margin: 0 auto;
 }
 
-.blog-text {
+.posts {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+}
+
+article {
+    margin-bottom: 1em;
+}
+
+img {
     width: 100%;
-    margin: 0;
-    padding: 0;
+}
+
+.article-info {
+    text-transform: uppercase;
+}
+
+.article-title {
+    font-size: 1.5rem;
+    margin: 0.5em 0 0.35em 0;
+}
+
+.article-preview {
+    margin-top: 0;
 }
 
 /* ========== FOOTER ========== */
@@ -133,21 +106,8 @@ footer {
     text-align: center;
 }
 
-/* ========== MEDIA QUERIES ========== */
-@media (min-width: 675px) {
-    h1 {
-        font-size: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-    }
-
-    .hero-text {
-        width: 60%;
-        margin-bottom: 2em;
-    }
-
-    .blog-feed {}
-
+p {
+    line-height: 1.3;
 }
+
+/* ========== MEDIA QUERIES ========== */
