@@ -56,12 +56,10 @@ const blogPostData = [
         imageAlt: 'Picture of a computer and desk',
     },
 ]
-
-
 function getBlogHtml() {
 
     let blogHtml = ``
-    blogPostData.forEach(function (post) {
+    blogPostData.slice(-3).forEach(function (post) {
         blogHtml += `
         <article class="post">
             <img class="article-img" src="${post.imagePath}" alt="${post.imageAlt}">
@@ -74,10 +72,8 @@ function getBlogHtml() {
     return blogHtml
 
 }
-function renderHome() {
-    const blogFeed = document.getElementById('posts')
+function renderAboutMe() {
+    const blogFeed = document.getElementById('small-posts')
     blogFeed.innerHTML = getBlogHtml()
 }
-renderHome()
-
-
+renderAboutMe()
