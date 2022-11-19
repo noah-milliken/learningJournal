@@ -131,18 +131,30 @@ img {
 .avatar {
     height: 180px;
     width: 180px;
+    margin-bottom: 1em;
 
 }
 
 .about-me-text {
-    width: 80%;
+    width: 100%;
     line-height: 1.5rem;
 
 }
 
+.about-me-title {
+    font-size: 2rem;
+    line-height: normal;
+}
+
+.about-me-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
 .content {
-    width: 80%;
+    width: 90%;
     margin: 1em auto;
+
 }
 
 .content h3 {
